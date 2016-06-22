@@ -1,0 +1,30 @@
+{
+  "name": "higher",
+  "version": "1.0.0",
+  "description": "Higher order functions for functional programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no-boilerplate/node-higher.git"
+  },
+  "keywords": [
+    "functional",
+    "higher"
+  ],
+  "author": "Ivan Erceg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/no-boilerplate/node-higher/issues"
+  },
+  "homepage": "https://github.com/no-boilerplate/node-higher#readme",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "ramda": "^0.21.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}
