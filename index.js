@@ -15,7 +15,7 @@ class H {
             return _.noop;
         }
 
-        return () => {
+        return function() {
             return fnOrValue;
         };
     }

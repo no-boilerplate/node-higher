@@ -55,7 +55,9 @@ describe('H', function() {
 
     it('ifElse', function() {
         var test = 'TEST';
-        assert.equal(H.ifElse(test, test.toLowerCase, 'never'), 'test');
+        assert.equal(H.ifElse(test, String.prototype.toLowerCase, 'never'), 'test');
+        test = null;
+        assert.equal(H.ifElse(test, String.prototype.toLowerCase, 'never'), 'never');
         assert.equal(H.ifElse(123, 456, 789), 456);
         assert.equal(H.ifElse('', 'no', 'yes'), 'yes');
     });

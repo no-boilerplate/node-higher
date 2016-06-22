@@ -30,9 +30,9 @@ H.unless(_.isUndefined, 'test', test);
 
 **What**: A concrete instance of `ramda` `ifElse` function that evaluates the given predicate or value and allows values to be used instead of functions.
 
-**Why**: Because writing `H.isFalsy('replacement value', maybeUndefined && maybeUndefined.someMethod)` all the time is lame and this makes the purpose clearer.
+**Why**: Because writing `H.isFalsy('replacement value', maybeUndefined && maybeUndefined.someMethod())` all the time is lame and this makes the purpose clearer.
 
-**How**: `H.ifElse(maybeUndefined, maybeUndefined.someMethod, 'replacement value')` (where `_` is `lodash`) will return either `'replacement value` or the result of `maybeUndefined.someMethod`.
+**How**: `H.ifElse(maybeUndefined, MaybeUndefinedClass.someMethod, 'replacement value')` (where `_` is `lodash`) will return either `'replacement value` or the result of `MaybeUndefinedClass.someMethod` applied on `maybeUndefined`.
 
 ### `ifFalsy`
 
