@@ -52,4 +52,11 @@ describe('H', function() {
         assert(_.isEqual(H.coerceArray(null), [null]));
         assert(_.isEqual(H.coerceArray([null]), [null]));
     });
+
+    it('ifElse', function() {
+        var test = 'TEST';
+        assert.equal(H.ifElse(test, test.toLowerCase, 'never'), 'test');
+        assert.equal(H.ifElse(123, 456, 789), 456);
+        assert.equal(H.ifElse('', 'no', 'yes'), 'yes');
+    });
 });

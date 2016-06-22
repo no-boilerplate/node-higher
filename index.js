@@ -32,6 +32,13 @@ class H {
         return H.unless(_.negate(_.isNull), whenFalseFnOrValue, x);
     }
 
+    static ifElse(value, onTrueFnOrValue, onFalseFnOrValue) {
+        return R.ifElse(
+            () => { return !!value; },
+            H.coerceFunction(onTrueFnOrValue).bind(value),
+            H.coerceFunction(onFalseFnOrValue).bind(value))(value);
+    }
+
 }
 
 //  Ripped of from Ramda docs.
