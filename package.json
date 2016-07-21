@@ -1,6 +1,6 @@
 {
   "name": "higher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Higher order functions for functional programming",
   "main": "index.js",
   "scripts": {
