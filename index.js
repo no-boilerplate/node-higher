@@ -39,6 +39,10 @@ class H {
             H.coerceFunction(onFalseFnOrValue).bind(value))(value);
     }
 
+    static isNonEmptyString(value) {
+      return _.isString(value) && !_.isEmpty(value);
+    }
+
 }
 
 //  Ripped of from Ramda docs.

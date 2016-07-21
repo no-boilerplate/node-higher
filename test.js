@@ -61,4 +61,15 @@ describe('H', function() {
         assert.equal(H.ifElse(123, 456, 789), 456);
         assert.equal(H.ifElse('', 'no', 'yes'), 'yes');
     });
+
+    it('isNonEmptyString', function() {
+      assert(H.isNonEmptyString('xyz'));
+      assert(H.isNonEmptyString(' '));
+      assert(!H.isNonEmptyString(''));
+      assert(!H.isNonEmptyString(123));
+      assert(!H.isNonEmptyString({}));
+      assert(!H.isNonEmptyString([]));
+      assert(!H.isNonEmptyString(null));
+      assert(!H.isNonEmptyString(undefined));
+    });
 });
