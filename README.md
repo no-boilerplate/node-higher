@@ -65,3 +65,19 @@ H.unless(_.isUndefined, 'test', test);
 **Why**: Because writing `x = _.isArray(x) ? x : [x];` destroys neurons and I saw the example in Ramda documentation and loved it.
 
 **How**: `H.coerceArray(123)` will return `[123]`
+
+### `isNonEmptyString`
+
+**What**: Returns true if and only if the given value is a non-empty string (even if all the characters are whitespaces)
+
+**Why**: Because writing `_.String(value) && !_.isEmpty(value)` is bound to make you zombie sooner or later (and I want to avoid it).
+
+**How**: `H.isNonEmptyString('')` will return `false` whereas `H.isNonEmptyString(' ')` will return `true`
+
+### `contains`
+
+**What**: Returns true if the given value is part of the given array.
+
+**Why**: Because writing `_.indexOf(array, value) !== -1` is way too long.
+
+**How**: `H.contains(['a', 'b'], 'c')` will return `false` whereas `H.isNonEmptyString(['a', 'b'], 'a')` will return `true`

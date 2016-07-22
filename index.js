@@ -40,9 +40,12 @@ class H {
     }
 
     static isNonEmptyString(value) {
-      return _.isString(value) && !_.isEmpty(value);
+        return _.isString(value) && !_.isEmpty(value);
     }
 
+    static contains(array, value) {
+        return _.indexOf(array, value) !== -1;
+    }
 }
 
 //  Ripped of from Ramda docs.
