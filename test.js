@@ -72,4 +72,18 @@ describe('H', function() {
       assert(!H.isNonEmptyString(null));
       assert(!H.isNonEmptyString(undefined));
     });
+
+    it('contains', function() {
+      assert(H.contains(['a', 'b'], 'a'));
+      assert(H.contains(['a', 'b'], 'b'));
+      assert(!H.contains(['a', 'b'], 'c'));
+      assert(!H.contains({'a': 'b'}, 'a'));
+      assert(!H.contains({'a': 'b'}, 'b'));
+      assert(!H.contains());
+      assert(!H.contains(123));
+      assert(!H.contains({}));
+      assert(!H.contains([]));
+      assert(!H.contains(null));
+      assert(!H.contains(undefined));
+    });
 });
