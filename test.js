@@ -86,4 +86,14 @@ describe('H', function() {
       assert(!H.contains(null));
       assert(!H.contains(undefined));
     });
+
+    it('noopIfNotFunction', function() {
+      assert.equal(H.noopIfNotFunction(H.noopIfNotFunction), H.noopIfNotFunction);
+      assert.equal(H.noopIfNotFunction(), _.noop);
+      assert.equal(H.noopIfNotFunction(123), _.noop);
+      assert.equal(H.noopIfNotFunction({}), _.noop);
+      assert.equal(H.noopIfNotFunction([]), _.noop);
+      assert.equal(H.noopIfNotFunction(null), _.noop);
+      assert.equal(H.noopIfNotFunction(undefined), _.noop);
+    });
 });
