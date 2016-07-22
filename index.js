@@ -46,6 +46,10 @@ class H {
     static contains(array, value) {
         return _.indexOf(array, value) !== -1;
     }
+
+    static noopIfNotFunction(fn) {
+        return _.isFunction(fn) ? fn : _.noop;
+    }
 }
 
 //  Ripped of from Ramda docs.

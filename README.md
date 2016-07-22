@@ -81,3 +81,11 @@ H.unless(_.isUndefined, 'test', test);
 **Why**: Because writing `_.indexOf(array, value) !== -1` is way too long.
 
 **How**: `H.contains(['a', 'b'], 'c')` will return `false` whereas `H.isNonEmptyString(['a', 'b'], 'a')` will return `true`
+
+### `noopIfNotFunction`
+
+**What**: Returns `_.noop` if the given value is not a function thus guaranteeing that the returned value is always a function.
+
+**Why**: Because writing `callback = _.isFunction(callback) ? callback : _.noop` has been written one too many times in the history of our Universe.
+
+**How**: `H.noopIfNotFunction(undefined)` will return `_.noop` whereas `H.noopIfNotFunction(() => undefined)` will return `() => undefined` function.
